@@ -1,22 +1,14 @@
 {
-  "name": "Robots.txt Checker",
+  "name": "Robots.txt-Checker",
   "version": "1.0.0",
-  "description": "Checking robots.txt for Google (Allow / Disallow)",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/evok1/Robots.txt-Checker.git"
-  },
   "engine": {
-    "4.4.7"
-  }
-  "author": "Loïc JULIEN",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/evok1/Robots.txt-Checker/issues"
+    "node": "6.4.0"
   },
-  "homepage": "https://github.com/evok1/Robots.txt-Checker#readme"
+  "author": "",
+  "license": "ISC"
 }
