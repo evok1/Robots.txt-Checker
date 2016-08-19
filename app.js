@@ -6,12 +6,11 @@
 // 1. Creating a web sever
 const http = require('http');
 
-const port =  process.en.PORT || 1337 ;
+const port =  process.env.PORT || 1337 ;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+http.createServer(function (request, response) {
+	response.writeHead(200, {'Content-Type': 'text/plain' });
+	response.end('Hello World');
 });
 
 /*
