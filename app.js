@@ -1,6 +1,8 @@
 // Problem : Sometimes, developpement push modified robots.txt and Google gets blocked by disallow in robots.txt files.
 // Solution : Checking each morning for good robots.txt settings of numerous websites, with node js.
 
+// test
+
 // 1. Creating a web sever
 const http = require('http');
 
