@@ -14,6 +14,11 @@ $robots4 = 'Sitemap: http://www.loicjulien.fr/sitemap_index.xml User-agent: * Di
 $robots5 = 'Disallow: /dossierpourrit' ;
 $robots6 = 'Sitemap: http://www.loicjulien.fr/sitemap_index.xml User-agent: *' ;
 
+
+// Checking if site is online
+// Getting robots.txt data from site
+
+// Checking robots.txt
 function robotsCheck ($dataToCheck)
 {
 	$sitemap ;
