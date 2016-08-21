@@ -1,0 +1,22 @@
+/* Elements ------------------------------------------- */
+body {
+	background-color: #f3f3f3;
+	font-family: Lato;
+}
+
+/* Hx ------------------------------------------- */
+h1, h2, h3 {
+	font-family: 'Varela Round', 'Lato', 'Sans serif';
+}
+
+/* Id ------------------------------------------- */
+
+#header {
+	margin-bottom: 30px;
+}
+
+/* Classes ------------------------------------------- */
+
+.textarea {
+	width: 80%;
+} 
