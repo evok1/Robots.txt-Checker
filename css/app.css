@@ -14,9 +14,8 @@ h1, h2, h3 {
 #header {
 	margin-bottom: 30px;
 }
+#content, #results {
+	text-align: center;
+}
 
 /* Classes ------------------------------------------- */
-
-.textarea {
-	width: 80%;
-} 
