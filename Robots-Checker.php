@@ -13,13 +13,18 @@ Say hello at loic.j.julien@gmail.com
 function robotsCheck($url)
 {
 	// Going through the data array
-	for ($i = 0; $i < count($url); ++$i) {
+	for ($i = 0 ; $i < count($url) ; ++$i) {
+		
+		echo 'Site à vérifier : ', $url[$i], '<br>' ;
+
 		// Check Http Status
-		$headers = get_headers($url);
-		$serverUp = $headers[0];
+		$headers = get_headers($url[$i]) ;
+		$serverUp = $headers[0] ;
 
 		// Getting Robots.txt content
-		$dataToCheck = file_get_contents($url) ;
+		$dataToCheck = file_get_contents($url[$i]) ;
+
+		echo 'Données du Robos.txt : <br>', $dataToCheck, '<br>' ;
 
 		// CHecking for Sitemap:
 		if (preg_match('/Sitemap:/', $dataToCheck))
@@ -40,7 +45,7 @@ function robotsCheck($url)
 			else $sitemapStatus = 'Need modification !' ;
 
 		// Printing results
-		echo $url[i], ' > status : ', $serverUp,' > sitemap : ', $sitemapStatus /*,' sitemap :', $sitemap, ' allow :', $allow, ' disallow :', $disallow*/, '<br>' ;
+		echo $url[$i], ' <br> status : ', $serverUp,' <br> sitemap : ', $sitemapStatus /*,' sitemap :', $sitemap, ' allow :', $allow, ' disallow :', $disallow*/, '<br> <br>' ;
 	}
 }
 
@@ -75,19 +80,17 @@ function robotsCheck($url)
 
 	<div class="row">
 		<div class="col-xs-6" id="content">
-			<h2>Données à vérifier</h2>
-			<?php
-				$sitesToCheck = array('http://www.loicjulien.fr/robots.txt',
-					'http://www.anj-communication.fr/robots.txt',
-					'http://www.nateev.fr/robots.txt',
-					'http://www.barthloc.com/robots.txt',
-					'http://us.marlavillas.com/robots.txt',
-					) ;
-				print_r($sitesToCheck) ;
-			?>
+			<h2>Sites to check</h2>
+				<textarea id="dataToCheck">http://www.loicjulien.fr/robots.txt
+http://www.anj-communication.fr/robots.txt
+http://www.nateev.fr/robots.txt
+http://frankgonnet.tcitron.eneka.fr/robots.txt
+http://us.marlavillas.com/robots.txt</textarea>
+				<!--<button id="save" class="btn">SAVE</button> -->
+				<button id="check" class="btn">CHECK</button>
 		</div>
 		<div class="col-xs-6" id="results">
-			<h2>Données vérifiées</h2>
+			<h2>Checked sites</h2>
 			<?php
 				robotsCheck($sitesToCheck) ;
 			?>
@@ -97,7 +100,7 @@ function robotsCheck($url)
 	<!-- Container - End ======================================================== -->
 
 	<!-- JS -->
-	<!-- <script src="js/app.js"></script> -->
+	<script src="js/app.js"></script>
 
 </body>
 </html>
