@@ -13,22 +13,3 @@ h2 {
 }
 
 /* Id ------------------------------------------- */
-#header {
-	margin-bottom: 30px;
-}
-#content, #results {
-	text-align: center;
-}
-#dataToCheck {
-	margin-left : auto;
-	margin-right: auto;
-	width: 80%;
-	height: 200px;
-	display: block;
-}
-#save, #check {
-	display: inline-block;
-	margin: 20px 0px 0px 20px;
-}
-
-/* Classes ------------------------------------------- */
