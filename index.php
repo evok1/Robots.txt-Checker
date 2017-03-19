@@ -31,34 +31,19 @@ Say hello at loic.j.julien@gmail.com
 		<h1>SEO status Check</h1>
 		<table class="table">
 			<thead>
-				<th>URL</th>
-				<th>Présence du Robots.txt </th>
-				<th>Config du Robots.txt</th>
-				<th>Config du site</th>
+				<th class="col-xs-3">URL</th>
+				<th class="col-xs-2 text-center">Site en ligne</th>
+				<th class="col-xs-2 text-center">Robots.txt Google Friendly</th>
+				<th class="col-xs-2 text-center">Méta Robots Google Friendly</th>
 			</thead>
 			 <tbody>
-				    <tr>
-				      <th scope="row">loicjulien.fr</th>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				    </tr>
-				    <tr>
-				      <th scope="row">doko.fr</th>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				    </tr>
-				    <tr>
-				      <th scope="row">ain-carrelages.com</th>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				    </tr>
+				 <?php checkingSite($sites) ?>
 			</tbody>
 		</table>
 
-		<?php checkingSite(www.loicjulien.fr) ?>
+		<div id="results">
+			
+		</div>
 	</div>
 
 	<!-- Container - End ======================================================== -->

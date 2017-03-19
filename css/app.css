@@ -1,15 +1,14 @@
-/* Elements ------------------------------------------- */
 body {
 	background-color: #f3f3f3;
 	font-family: Lato;
 }
-
-/* Hx ------------------------------------------- */
 h1, h2, h3 {
 	font-family: 'Varela Round', 'Lato', 'Sans serif';
 }
 h2 {
 	margin-bottom: 20px;
 }
-
-/* Id ------------------------------------------- */
+.message {
+	font-weight: bold;
+	padding: 0px 30px 0px 30px;
+}
