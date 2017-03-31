@@ -5,6 +5,8 @@ Say hello at loic.j.julien@gmail.com
 -->
 <?php require 'php/app.php' ; ?>
 
+<?php // require 'php/test.php' ; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +22,7 @@ Say hello at loic.j.julien@gmail.com
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	
 	<!-- Custom CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Varela+Round" rel="stylesheet">
 	<link rel="stylesheet" href="css/app.css">
 
 </head>
