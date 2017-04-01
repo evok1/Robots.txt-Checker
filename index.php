@@ -10,7 +10,7 @@ Say hello at loic.j.julien@gmail.com
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Robots.txt Checker : never be de-indexed by Google</title>
+	<title>SEO status check</title>
 	<meta charset="utf-8">
 	
 	<!-- Jquery -->
@@ -31,13 +31,14 @@ Say hello at loic.j.julien@gmail.com
 
 	<!-- Container ======================================================== -->
 	<div class="container">
-		<h1>SEO status Check</h1>
-		<table class="table">
+		<h1>SEO status check</h1>
+		<h2 class="subtitle">Never be deindexed by Google !</h2>
+		<table class="table table-results">
 			<thead>
 				<th class="col-xs-3">URL</th>
-				<th class="col-xs-2 text-center">Site en ligne</th>
-				<th class="col-xs-2 text-center">Robots.txt Google Friendly</th>
-				<th class="col-xs-2 text-center">Méta Robots Google Friendly</th>
+				<th class="col-xs-2 text-center">Site status</th>
+				<th class="col-xs-2 text-center">Robots.txt </th>
+				<th class="col-xs-2 text-center">Meta Robots</th>
 			</thead>
 			 <tbody>
 				 <?php checkingSite($sites) ?>

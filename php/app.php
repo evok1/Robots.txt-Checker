@@ -1,7 +1,7 @@
 <?php 
 
 // Sites to Check
-$sites = ['https://www.google.fr','https://www.youtube.com','https://www.apple.com/','https://www.microsoft.com','http://www.loicjulien.fr','http://www.doko.fr','http://barthloc.com','http://www.adem-expertise.com'] ;
+$sites = ['https://www.google.fr','https://www.youtube.com','https://www.apple.com/','https://www.microsoft.com','http://barthloc.com','http://juku.fr'] ;
 
 // Variable
 $site_en_ligne ;
@@ -23,7 +23,7 @@ function checkingSite ($data) {
 		} elseif (strpos($server_status, '301') !== false) {
 			$site_en_ligne = "<div class=\"bg-warning message text-center \">301</div>" ;
 		} else {
-			$site_en_ligne = "<div class=\"bg-danger message text-center \">ERREUR</div>" ;
+			$site_en_ligne = "<div class=\"bg-danger message text-center \">ERROR</div>" ;
 		}
 
 		// ====================================================================================
@@ -35,20 +35,20 @@ function checkingSite ($data) {
 			if (strpos($robots_up, '200') == true) {
 				$robot_contenu = file_get_contents($robot_url) ;
 					if (strpos($robot_contenu, 'Disallow: /\n') !== false) {
-			 			$robots_txt_friendly = "<div class=\"bg-danger message text-center \">En Disallow !</div>" ;
+			 			$robots_txt_friendly = "<div class=\"bg-danger message text-center \">Disallow !</div>" ;
 					} else {
 						$robots_txt_friendly = "<div class=\"bg-success message text-center \">OK</div>" ;
 					}
 			} else {
-				$robots_txt_friendly = "<div class=\"bg-warning message text-center \">Pas trouvé</div>" ;
+				$robots_txt_friendly = "<div class=\"bg-warning message text-center \">Not found</div>" ;
 		}
 
 		// ====================================================================================
 		// Checking meta robots
 
 		$url_contenu = file_get_contents($url) ;
-		if (strpos($url_contenu, '<meta name="robots" content="noindex') !== false) {
- 			$meta_robot_friendly = "<div class=\"bg-danger message text-center \">En noindex !</div>" ;
+		if (strpos($url_contenu, 'noindex') !== false) {
+ 			$meta_robot_friendly = "<div class=\"bg-danger message text-center \">Noindex !</div>" ;
 		} else 
 {			$meta_robot_friendly = "<div class=\"bg-success message text-center \">OK</div>" ;
 		}
